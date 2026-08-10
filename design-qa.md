@@ -4,7 +4,7 @@ final result: blocked
 
 ## Comparison Target
 
-- Source visual truth: conversation attachment showing the previous separated status bar and bottom navigation, plus the requested integrated-gradient and floating-navigation direction.
+- Source visual truth: conversation attachment comparing the current tall profile area with a compact reference header and specifying the supplied waving-deer IP.
 - Implementation: `index.html` and `styles.css` in this folder.
 - Intended CSS viewport: `393x1128 px`, device scale factor `1`.
 - Implementation screenshot: unavailable; the in-app browser reported no available browser instance.
@@ -23,8 +23,11 @@ final result: blocked
 - The listening-practice selected icon now uses a deep-teal/high-saturation green palette with a specified `4.68:1` key-detail-to-plate contrast.
 - The status bar and learner profile now share one edge-to-edge blue gradient wrapper with no independent status-bar background.
 - Status-bar text uses translucent white and the supplied iOS status asset is rendered white through a CSS filter.
-- The profile header uses `32px` lower corner radii and two-layer blue shadowing for a softer raised surface.
+- The profile surface is reduced to `142px`, showing only the avatar, learner name, class, and the supplied smiling waving-deer IP.
+- The waving-deer IP is constrained to `104px` high and anchored below the `36px` status-bar area so its antlers do not collide with Wi-Fi or battery indicators.
+- The profile background now fades from blue into the page's `#E4F6FF` background without a lower corner boundary or header shadow; the stats card overlaps the transition by `6px`.
 - The fixed tab bar now sits `12px` above the home-indicator area and uses a translucent blurred surface with two-layer soft shadowing.
+- The learning-report kicker and the `流暢度 +12%，聲調更穩` detail line are removed; the monthly report title and view action remain.
 - All 22 referenced image assets exist locally.
 - All 18 business-icon references now use `./1x-V2/`; no `logo2x` reference remains.
 - The three new default Tab assets and revised listening icon are `36x36 px` RGBA PNGs with fully transparent canvas corners.
@@ -32,7 +35,7 @@ final result: blocked
 ## Required Fidelity Surfaces
 
 - Fonts and typography: requested heading color is confirmed in CSS; browser-rendered weight, antialiasing, and wrapping remain unverified.
-- Spacing and layout rhythm: the status bar is absolutely positioned within the `212px` profile surface, and the navigation-to-home-indicator gap is confirmed in CSS; visible overlap and final vertical rhythm remain unverified.
+- Spacing and layout rhythm: the status bar is absolutely positioned within the compact `142px` profile surface, and the navigation-to-home-indicator gap is confirmed in CSS; visible overlap and final vertical rhythm remain unverified.
 - Colors and visual tokens: all requested hex and 4% alpha values are confirmed in CSS.
 - Image quality and asset fidelity: the active learning Tab uses the selected asset, the other three Tabs use unselected assets, and the revised listening icon uses the stronger selected-state palette at native size. Browser sharpness remains unverified.
 - Copy and content: `9:41`, Traditional Chinese labels, and the existing learning-page content are present.
@@ -46,7 +49,7 @@ final result: blocked
 
 ## Comparison History
 
-- Current pass: integrated top gradient, light status content, softened profile-header elevation, and floating bottom navigation implemented; static checks passed; visual comparison remains blocked before the first screenshot pass.
+- Current pass: compact profile header, lowered waving-deer asset, seamless blue-to-page transition, and simplified report content implemented; static checks passed; visual comparison remains blocked before the first screenshot pass.
 
 ## Focused Region Evidence
 

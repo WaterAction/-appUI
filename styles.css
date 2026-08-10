@@ -45,13 +45,15 @@ a {
 .profile-header {
   position: relative;
   margin: 0 -14px;
-  padding: 0 14px 18px;
+  padding: 0 14px 14px;
   overflow: hidden;
-  border-radius: 0 0 32px 32px;
-  background: linear-gradient(145deg, #48d4fb 0%, #3398f1 54%, #2b74e4 100%);
-  box-shadow:
-    0 18px 40px rgba(31, 91, 166, 0.2),
-    0 5px 14px rgba(31, 91, 166, 0.09);
+  background: linear-gradient(
+    180deg,
+    #48d4fb 0%,
+    #3398f1 58%,
+    #76bcef 78%,
+    #e4f6ff 100%
+  );
 }
 
 .system-statusbar {
@@ -60,8 +62,8 @@ a {
   left: 0;
   z-index: 3;
   width: 100%;
-  height: 44px;
-  padding: 12px 26px 8px;
+  height: 36px;
+  padding: 8px 26px 6px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -90,8 +92,8 @@ a {
 
 .profile-hero {
   position: relative;
-  min-height: 212px;
-  padding: 60px 18px 18px;
+  min-height: 142px;
+  padding: 44px 18px 12px;
   overflow: hidden;
   background: transparent;
 }
@@ -130,7 +132,7 @@ a {
 }
 
 .profile-copy h1 {
-  margin: 2px 0 6px;
+  margin: 0 0 6px;
   font-size: 32px;
   line-height: 38px;
   letter-spacing: 0;
@@ -162,20 +164,19 @@ a {
 
 .hero-mascot {
   position: absolute;
-  right: -22px;
-  bottom: -38px;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  object-position: 50% 10%;
-  border-radius: 46px;
-  opacity: 0.34;
-  mix-blend-mode: screen;
-  transform: rotate(-4deg);
+  right: 8px;
+  bottom: 0;
+  width: 96px;
+  height: 104px;
+  object-fit: contain;
+  object-position: center bottom;
+  pointer-events: none;
 }
 
 .stats-strip {
-  margin-top: 12px;
+  position: relative;
+  z-index: 2;
+  margin-top: -6px;
   min-height: 90px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -229,14 +230,27 @@ a {
   white-space: nowrap;
 }
 
+.ranking-stat {
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 17px;
+  justify-items: center;
+  column-gap: 0;
+}
+
+.ranking-stat img {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+}
+
 .ranking-stat span {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 2;
 }
 
 .report-card {
   margin-top: 12px;
-  min-height: 86px;
+  min-height: 80px;
   display: grid;
   grid-template-columns: 62px 1fr 54px;
   align-items: center;
@@ -267,7 +281,7 @@ a {
 }
 
 .report-card h2 {
-  margin: 1px 0 2px;
+  margin: 0;
   color: var(--primary-deep);
   font-size: 21px;
   line-height: 28px;
