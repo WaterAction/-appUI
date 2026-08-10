@@ -24,8 +24,8 @@ final result: blocked
 - The status bar and learner profile now share one edge-to-edge blue gradient wrapper with no independent status-bar background.
 - Status-bar text uses translucent white and the supplied iOS status asset is rendered white through a CSS filter.
 - The profile surface is reduced to `142px`, showing only the avatar, learner name, class, and the supplied smiling waving-deer IP.
-- The waving-deer IP is constrained to `104px` high and anchored below the `36px` status-bar area so its antlers do not collide with Wi-Fi or battery indicators.
-- The profile background now fades from blue into the page's `#E4F6FF` background without a lower corner boundary or header shadow; the stats card overlaps the transition by `6px`.
+- The learner name is rendered at `24px`; the waving-deer IP is enlarged to `120px` high and starts immediately below the `36px` status-bar area.
+- The profile background fades into `#E4F6FF` without a lower boundary; the stats card overlaps the transition by `20px` and visually covers the deer's lower legs.
 - The fixed tab bar now sits `12px` above the home-indicator area and uses a translucent blurred surface with two-layer soft shadowing.
 - The learning-report kicker and the `流暢度 +12%，聲調更穩` detail line are removed; the monthly report title and view action remain.
 - All 22 referenced image assets exist locally.
