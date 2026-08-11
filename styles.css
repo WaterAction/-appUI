@@ -132,10 +132,12 @@ a {
 
 .profile-copy h1 {
   margin: 0 0 6px;
+  color: #111827;
+  font-family: "SimHei", "Microsoft YaHei", "PingFang SC", "PingFang HK", sans-serif;
   font-size: 24px;
   line-height: 30px;
   letter-spacing: 0;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .class-pill {
