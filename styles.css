@@ -251,30 +251,32 @@ a {
 
 .report-card {
   margin-top: 12px;
-  min-height: 96px;
+  min-height: 112px;
   display: grid;
-  grid-template-columns: 56px minmax(0, 1fr) 44px;
+  grid-template-columns: 64px minmax(0, 1fr) 36px;
   align-items: center;
   gap: 10px;
-  padding: 12px;
+  padding: 14px 16px;
   border-radius: 24px;
-  background: linear-gradient(135deg, #fafdff 0%, #e9f6ff 100%);
-  border: 1px solid rgba(231, 237, 247, 0.85);
-  box-shadow: var(--shadow);
+  background: url("./learning-report-card-background.png") center / 120% auto no-repeat;
+  border: 0;
+  box-shadow: none;
+  overflow: hidden;
 }
 
 .report-visual {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   display: grid;
   place-items: center;
-  border-radius: 18px;
-  background: #dff1ff;
+  border-radius: 20px;
+  background: rgba(209, 235, 255, 0.72);
 }
 
 .report-visual img {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }
 
 .section-kicker {
@@ -306,23 +308,31 @@ a {
 
 .report-action {
   justify-self: end;
+  align-self: end;
   display: inline-grid;
   place-items: center;
-  width: 44px;
-  min-width: 44px;
-  height: 44px;
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: #fff;
-  border: 2px solid rgba(36, 119, 232, 0.22);
-  color: var(--primary-deep);
-  font-size: 32px;
-  line-height: 1;
-  font-weight: 700;
-  box-shadow: 0 5px 14px rgba(36, 119, 232, 0.12);
+  border: 0;
+  box-shadow: 0 6px 16px rgba(45, 123, 234, 0.16);
+  transform: translate(7px, 1px);
 }
 
 .report-action span {
-  transform: translateY(-1px);
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+}
+
+.report-action img {
+  display: block;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
 }
 
 .section-block {
@@ -402,22 +412,22 @@ a {
 
 .oral-card.blue {
   background: rgba(37, 196, 242, 0.1);
-  border: 1px solid rgba(37, 196, 242, 0.24);
+  border: 1px solid transparent;
 }
 
 .oral-card.orange {
   background: rgba(255, 154, 77, 0.1);
-  border: 1px solid rgba(255, 154, 77, 0.24);
+  border: 1px solid transparent;
 }
 
 .oral-card.violet {
   background: rgba(122, 115, 245, 0.09);
-  border: 1px solid rgba(122, 115, 245, 0.22);
+  border: 1px solid transparent;
 }
 
 .oral-card.green {
   background: rgba(123, 200, 50, 0.1);
-  border: 1px solid rgba(123, 200, 50, 0.24);
+  border: 1px solid transparent;
 }
 
 .pinyin-grid {
@@ -434,7 +444,7 @@ a {
   padding: 12px;
   border-radius: 18px;
   background: rgba(37, 196, 242, 0.08);
-  border: 1px solid rgba(37, 196, 242, 0.2);
+  border: 1px solid transparent;
   transition: transform 150ms ease;
 }
 
@@ -444,7 +454,7 @@ a {
 
 .pinyin-card.mint {
   background: rgba(123, 200, 50, 0.09);
-  border-color: rgba(123, 200, 50, 0.22);
+  border-color: transparent;
 }
 
 .pinyin-card img {
@@ -475,7 +485,7 @@ a {
   padding: 10px 4px 9px;
   border-radius: 18px;
   background: var(--bg);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(112, 145, 182, 0.10);
   transition: transform 150ms ease;
 }
 
