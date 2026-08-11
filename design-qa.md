@@ -4,7 +4,7 @@ final result: blocked
 
 ## Comparison Target
 
-- Source visual truth: conversation attachment comparing the current tall profile area with a compact reference header and specifying the supplied waving-deer IP.
+- Source visual truth: conversation attachment comparing the current top background placement with the target deer reveal.
 - Implementation: `index.html` and `styles.css` in this folder.
 - Intended CSS viewport: `393x1128 px`, device scale factor `1`.
 - Implementation screenshot: unavailable; the in-app browser reported no available browser instance.
@@ -23,12 +23,13 @@ final result: blocked
 - The listening-practice selected icon now uses a deep-teal/high-saturation green palette with a specified `4.68:1` key-detail-to-plate contrast.
 - The status bar and learner profile now share one edge-to-edge blue gradient wrapper with no independent status-bar background.
 - Status-bar text uses translucent white and the supplied iOS status asset is rendered white through a CSS filter.
-- The profile surface is reduced to `142px`, showing only the avatar, learner name, class, and the supplied smiling waving-deer IP.
-- The learner name is rendered at `24px`; the supplied `top-back.png` is used as the profile background with bottom-aligned cover sizing and a subtle lower fade.
-- The waving deer now stands on a compact white-blue cloud asset, remains below the `36px` status-bar area, and integrates into the `20px` stats-card overlap.
+- The profile surface is reduced to `142px`, showing only the avatar, learner name, and class over the supplied full-page background.
+- The learner name is rendered at `24px`; the app shell now uses the supplied `app-bg-pure.png` as the full-page background, shifted upward by `18px`, with the profile header transparent over it.
+- The former standalone cloud-mounted deer asset has been removed; the visible top illustration now comes from `app-bg-pure.png`.
 - The fixed tab bar now sits `12px` above the home-indicator area and uses a translucent blurred surface with two-layer soft shadowing.
 - The learning-growth card now uses the exact Traditional Chinese title `7月學習成長報告出爐啦！` and subtitle `看看這個月的學習進步吧`.
 - Its generated transparent icon contains one open report book, three stars, and one upward growth arrow; the action remains a circular right-chevron button.
+- The learning-growth card surface now uses CSS gradients, a subtle border, and a soft curve decoration instead of the full framed PNG background, removing the clipped top and bottom frame edges.
 - All 22 referenced image assets exist locally.
 - All 18 business-icon references now use `./1x-V2/`; no `logo2x` reference remains.
 - The three new default Tab assets and revised listening icon are `36x36 px` RGBA PNGs with fully transparent canvas corners.
@@ -50,7 +51,7 @@ final result: blocked
 
 ## Comparison History
 
-- Current pass: supplied top background, cloud-mounted waving-deer asset, compact profile header, and redesigned learning-growth card implemented; static checks passed; visual comparison remains blocked before the first screenshot pass.
+- Current pass: supplied full-page background, removed standalone cloud-mounted deer asset, compact profile header, and redesigned learning-growth card implemented; static checks passed; visual comparison remains blocked before the first screenshot pass.
 
 ## Focused Region Evidence
 

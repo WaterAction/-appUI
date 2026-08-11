@@ -25,7 +25,6 @@
               <p class="class-pill">S1 A班</p>
             </div>
           </div>
-          <img class="hero-mascot" src="./assets/deer-waving-cloud.png" alt="站在云朵上微笑招手的小鹿" />
         </section>
       </div>
 
@@ -40,10 +39,13 @@
           <strong>399</strong>
           <span>練習記錄</span>
         </article>
-        <article class="stat-item ranking-stat">
-          <img src="./1x-v2-2透明版/ranking-selected-36px-transparent.png" alt="" />
-          <span>排行榜</span>
-        </article>
+        <a class="stat-item ranking-stat" href="#" aria-label="查看排行榜">
+          <img src="./1x-v2-2透明版/ranking-selected-36px-transparent.png?v=202608111602" alt="" />
+          <span class="ranking-copy">
+            <strong>排行榜</strong>
+            <em>查看排名</em>
+          </span>
+        </a>
       </section>
 
       <section class="report-card" aria-label="學習報告">
@@ -56,7 +58,7 @@
         </div>
         <a class="report-action" href="#" aria-label="查看學習報告">
           <span aria-hidden="true">
-            <img src="./right-arrow2.png" alt="" />
+            <i data-lucide="chevron-right"></i>
           </span>
         </a>
       </section>
@@ -126,7 +128,7 @@
             <span>作文批改</span>
           </a>
           <a class="mini-card" href="#">
-            <img src="./1x-v2-2透明版/composition-correction-dse-selected-36px-transparent.png" alt="" />
+            <img src="./1x-v2-2透明版/composition-correction-dse-selected-36.png" alt="" />
             <span>作文批改<br />（DSE）</span>
           </a>
         </div>
@@ -134,19 +136,19 @@
 
       <nav class="tabbar" aria-label="底部導航">
         <a class="tab active" href="#">
-          <img src="./1x-v2-2透明版/learning-selected-36px-transparent.png" alt="" />
+          <i data-lucide="book-open" aria-hidden="true"></i>
           <span>學習</span>
         </a>
         <a class="tab" href="#">
-          <img src="./1x-v2-2透明版/task-unselected-36px-transparent.png" alt="" />
+          <i data-lucide="clipboard-list" aria-hidden="true"></i>
           <span>任務</span>
         </a>
         <a class="tab" href="#">
-          <img src="./1x-v2-2透明版/extension-course-unselected-36px-transparent.png" alt="" />
+          <i data-lucide="share-2" aria-hidden="true"></i>
           <span>拓展課</span>
         </a>
         <a class="tab" href="#">
-          <img src="./1x-v2-2透明版/live-class-unselected-36px-transparent.png" alt="" />
+          <i data-lucide="video" aria-hidden="true"></i>
           <span>直播課</span>
         </a>
       </nav>
@@ -155,5 +157,9 @@
         <img class="home-indicator" src="./assets/ios-home-indicator.svg" alt="" />
       </div>
     </main>
+    <script src="./assets/lucide.min.js"></script>
+    <script>
+      globalThis.lucide?.createIcons();
+    </script>
   </body>
 </html>
