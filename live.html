@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>普通話 App 第3版：直播課</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell tasks-shell live-shell" aria-label="普通話直播課頁">
+      <header class="system-statusbar" aria-label="手機系統狀態欄">
+        <time datetime="09:41">9:41</time>
+        <img
+          src="./assets/ios-status-icons.svg"
+          alt="滿格蜂窩訊號、Wi-Fi、100% 電量"
+        />
+      </header>
+
+      <section class="task-hero live-hero" aria-label="直播課頁首">
+        <h1>直播課</h1>
+        <a class="task-report-link" href="#" aria-label="查看學習報告">
+          <img src="./1x-v2-2透明版/learning-report-icon-36px-transparent.png" alt="" />
+        </a>
+      </section>
+
+      <section class="live-shortcuts" aria-label="常用入口">
+        <a class="live-shortcut violet" href="./tasks.html">
+          <span class="live-shortcut-icon">
+            <img src="./1x-v2-2透明版/task-selected-36px-transparent.png" alt="" />
+            <em>6</em>
+          </span>
+          <span>作業</span>
+        </a>
+        <a class="live-shortcut amber" href="#">
+          <span class="live-shortcut-icon">
+            <img src="./1x-v2-2透明版/learning-report-icon-36px-transparent.png" alt="" />
+          </span>
+          <span>學習報告</span>
+        </a>
+        <a class="live-shortcut blue" href="#">
+          <span class="live-shortcut-icon">
+            <i data-lucide="square-pen" aria-hidden="true"></i>
+            <em>14</em>
+          </span>
+          <span>在線習題</span>
+        </a>
+        <a class="live-shortcut rose" href="#">
+          <span class="live-shortcut-icon">
+            <i data-lucide="users-round" aria-hidden="true"></i>
+          </span>
+          <span>我的班級</span>
+        </a>
+      </section>
+
+      <section class="live-courses" aria-label="我的直播課程">
+        <header class="live-section-head">
+          <div class="section-title">
+            <span class="title-mark live-mark"></span>
+            <h2>我的課程</h2>
+          </div>
+          <a class="live-more" href="#">查看更多 <i data-lucide="chevron-right" aria-hidden="true"></i></a>
+        </header>
+
+        <div class="live-course-list">
+          <article class="live-course-card">
+            <div class="live-card-top">
+              <div>
+                <span class="live-status">未開始</span>
+                <h3>第1講：第一課</h3>
+              </div>
+              <a class="course-action live-action" href="#">預習</a>
+            </div>
+            <div class="live-time-row">
+              <i data-lucide="clock" aria-hidden="true"></i>
+              <strong>04:00—04:45</strong>
+            </div>
+            <time datetime="2026-07-20">2026-07-20</time>
+          </article>
+
+          <article class="live-course-card">
+            <div class="live-card-top">
+              <div>
+                <span class="live-status">未開始</span>
+                <h3>第2講：第二課</h3>
+              </div>
+              <a class="course-action live-action" href="#">預習</a>
+            </div>
+            <div class="live-time-row">
+              <i data-lucide="clock" aria-hidden="true"></i>
+              <strong>04:00—04:45</strong>
+            </div>
+            <time datetime="2026-07-27">2026-07-27</time>
+          </article>
+        </div>
+      </section>
+
+      <div class="live-toast" role="status">狀態異常，請聯繫我們</div>
+      <button class="live-refresh" type="button" aria-label="刷新直播課狀態">
+        <i data-lucide="refresh-cw" aria-hidden="true"></i>
+      </button>
+
+      <nav class="tabbar" aria-label="底部導航">
+        <a class="tab" href="./index.html">
+          <i data-lucide="book-open" aria-hidden="true"></i>
+          <span>學習</span>
+        </a>
+        <a class="tab" href="./tasks.html">
+          <i data-lucide="clipboard-list" aria-hidden="true"></i>
+          <span>任務</span>
+        </a>
+        <a class="tab" href="./extension.html">
+          <i data-lucide="share-2" aria-hidden="true"></i>
+          <span>拓展課</span>
+        </a>
+        <a class="tab active" href="./live.html">
+          <i data-lucide="video" aria-hidden="true"></i>
+          <span>直播課</span>
+        </a>
+      </nav>
+
+      <div class="device-home-area" aria-hidden="true">
+        <img class="home-indicator" src="./assets/ios-home-indicator.svg" alt="" />
+      </div>
+    </main>
+    <script src="./assets/lucide.min.js"></script>
+    <script>
+      globalThis.lucide?.createIcons();
+    </script>
+  </body>
+</html>

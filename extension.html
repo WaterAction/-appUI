@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>普通話 App 第3版｜拓展課</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell tasks-shell extension-shell" aria-label="普通話拓展課頁">
+      <header class="system-statusbar" aria-label="手機系統狀態欄">
+        <time datetime="09:41">9:41</time>
+        <img
+          src="./assets/ios-status-icons.svg"
+          alt="滿格蜂窩訊號、Wi-Fi、100% 電量"
+        />
+      </header>
+
+      <section class="task-hero extension-hero" aria-label="拓展課">
+        <h1>拓展課</h1>
+      </section>
+
+      <nav class="task-segment extension-segment" aria-label="拓展課狀態">
+        <button class="segment-item active" type="button" data-state="upcoming" aria-controls="upcoming-courses" aria-pressed="true">未開始</button>
+        <button class="segment-item" type="button" data-state="ended" aria-controls="ended-courses" aria-pressed="false">已結束</button>
+      </nav>
+
+      <section class="extension-course-list extension-panel" id="upcoming-courses" data-panel="upcoming" aria-label="未開始拓展課列表">
+        <article class="extension-course-card">
+          <header class="course-card-head">
+            <span class="course-status">拓展</span>
+            <h2>第1講：第一課</h2>
+          </header>
+          <p class="course-summary">課前預習與拓展閱讀</p>
+          <footer class="course-card-footer">
+            <span>2026-07-27 · 05:00—05:30</span>
+            <a class="course-action" href="#">預習</a>
+          </footer>
+        </article>
+
+        <article class="extension-course-card">
+          <header class="course-card-head">
+            <span class="course-status">拓展</span>
+            <h2>第2講：第二課</h2>
+          </header>
+          <p class="course-summary">主題導讀與口語準備</p>
+          <footer class="course-card-footer">
+            <span>2026-08-03 · 05:00—05:30</span>
+            <a class="course-action" href="#">預習</a>
+          </footer>
+        </article>
+
+        <article class="extension-course-card">
+          <header class="course-card-head">
+            <span class="course-status">拓展</span>
+            <h2>第3講：第三課</h2>
+          </header>
+          <p class="course-summary">故事理解與表達練習</p>
+          <footer class="course-card-footer">
+            <span>2026-08-10 · 05:00—05:30</span>
+            <a class="course-action" href="#">預習</a>
+          </footer>
+        </article>
+
+        <article class="extension-course-card">
+          <header class="course-card-head">
+            <span class="course-status">拓展</span>
+            <h2>第4講：第四課</h2>
+          </header>
+          <p class="course-summary">課前任務與資料預覽</p>
+          <footer class="course-card-footer">
+            <span>2026-08-17 · 05:00—05:30</span>
+            <a class="course-action" href="#">預習</a>
+          </footer>
+        </article>
+      </section>
+
+      <section class="extension-course-list extension-panel" id="ended-courses" data-panel="ended" aria-label="已結束拓展課列表" hidden>
+        <article class="extension-course-card ended">
+          <header class="course-card-head">
+            <span class="course-status">拓展</span>
+            <h2>第4講：狼大叔的紅燜雞</h2>
+          </header>
+          <p class="course-summary">課程已結束，課件可查看</p>
+          <footer class="course-card-footer">
+            <span>2026-03-02 · 11:00—11:30</span>
+            <a class="course-action material" href="#">查看課件</a>
+          </footer>
+        </article>
+
+        <article class="extension-course-card ended">
+          <header class="course-card-head">
+            <span class="course-status">拓展</span>
+            <h2>第3講：小壁虎借尾巴</h2>
+          </header>
+          <p class="course-summary">課程已結束，課件可查看</p>
+          <footer class="course-card-footer">
+            <span>2026-02-23 · 10:00—10:30</span>
+            <a class="course-action material" href="#">查看課件</a>
+          </footer>
+        </article>
+
+        <article class="extension-course-card ended">
+          <header class="course-card-head">
+            <span class="course-status">拓展</span>
+            <h2>第2講：荷葉圓圓</h2>
+          </header>
+          <p class="course-summary">課程已結束，課件可查看</p>
+          <footer class="course-card-footer">
+            <span>2026-02-16 · 09:30—10:00</span>
+            <a class="course-action material" href="#">查看課件</a>
+          </footer>
+        </article>
+      </section>
+
+      <nav class="tabbar" aria-label="底部導航">
+        <a class="tab" href="./index.html">
+          <i data-lucide="book-open" aria-hidden="true"></i>
+          <span>學習</span>
+        </a>
+        <a class="tab" href="./tasks.html">
+          <i data-lucide="clipboard-list" aria-hidden="true"></i>
+          <span>任務</span>
+        </a>
+        <a class="tab active" href="./extension.html">
+          <i data-lucide="share-2" aria-hidden="true"></i>
+          <span>拓展課</span>
+        </a>
+        <a class="tab" href="./live.html">
+          <i data-lucide="video" aria-hidden="true"></i>
+          <span>直播課</span>
+        </a>
+      </nav>
+
+      <div class="device-home-area" aria-hidden="true">
+        <img class="home-indicator" src="./assets/ios-home-indicator.svg" alt="" />
+      </div>
+    </main>
+    <script src="./assets/lucide.min.js"></script>
+    <script>
+      globalThis.lucide?.createIcons();
+
+      document.querySelectorAll(".segment-item").forEach((segment) => {
+        segment.addEventListener("click", () => {
+          const state = segment.dataset.state;
+
+          document.querySelectorAll(".segment-item").forEach((item) => {
+            const isActive = item === segment;
+            item.classList.toggle("active", isActive);
+            item.setAttribute("aria-pressed", String(isActive));
+          });
+
+          document.querySelectorAll(".extension-panel").forEach((panel) => {
+            panel.hidden = panel.dataset.panel !== state;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
