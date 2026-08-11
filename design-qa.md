@@ -24,10 +24,11 @@ final result: blocked
 - The status bar and learner profile now share one edge-to-edge blue gradient wrapper with no independent status-bar background.
 - Status-bar text uses translucent white and the supplied iOS status asset is rendered white through a CSS filter.
 - The profile surface is reduced to `142px`, showing only the avatar, learner name, class, and the supplied smiling waving-deer IP.
-- The learner name is rendered at `24px`; the waving-deer IP is enlarged to `120px` high and starts immediately below the `36px` status-bar area.
-- The profile background fades into `#E4F6FF` without a lower boundary; the stats card overlaps the transition by `20px` and visually covers the deer's lower legs.
+- The learner name is rendered at `24px`; the supplied `top-back.png` is used as the profile background with bottom-aligned cover sizing and a subtle lower fade.
+- The waving deer now stands on a compact white-blue cloud asset, remains below the `36px` status-bar area, and integrates into the `20px` stats-card overlap.
 - The fixed tab bar now sits `12px` above the home-indicator area and uses a translucent blurred surface with two-layer soft shadowing.
-- The learning-report kicker and the `流暢度 +12%，聲調更穩` detail line are removed; the monthly report title and view action remain.
+- The learning-growth card now uses the exact Traditional Chinese title `7月學習成長報告出爐啦！` and subtitle `看看這個月的學習進步吧`.
+- Its generated transparent icon contains one open report book, three stars, and one upward growth arrow; the action remains a circular right-chevron button.
 - All 22 referenced image assets exist locally.
 - All 18 business-icon references now use `./1x-V2/`; no `logo2x` reference remains.
 - The three new default Tab assets and revised listening icon are `36x36 px` RGBA PNGs with fully transparent canvas corners.
@@ -49,7 +50,7 @@ final result: blocked
 
 ## Comparison History
 
-- Current pass: compact profile header, lowered waving-deer asset, seamless blue-to-page transition, and simplified report content implemented; static checks passed; visual comparison remains blocked before the first screenshot pass.
+- Current pass: supplied top background, cloud-mounted waving-deer asset, compact profile header, and redesigned learning-growth card implemented; static checks passed; visual comparison remains blocked before the first screenshot pass.
 
 ## Focused Region Evidence
 

@@ -9,6 +9,9 @@
   --soft: #9aa3af;
   --border: #e7edf7;
   --reward: #ffd23f;
+  --coral: #ff6d5a;
+  --purple: #7a73f5;
+  --green: #a6e435;
   --shadow: 0 8px 24px rgba(38, 89, 140, 0.09);
   --shadow-strong: 0 14px 32px rgba(38, 116, 190, 0.16);
   font-family: "PingFang HK", "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
@@ -47,13 +50,9 @@ a {
   margin: 0 -14px;
   padding: 0 14px 14px;
   overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    #48d4fb 0%,
-    #3398f1 58%,
-    #76bcef 78%,
-    #e4f6ff 100%
-  );
+  background:
+    linear-gradient(180deg, rgba(17, 105, 218, 0.08) 0%, rgba(255, 255, 255, 0) 68%, rgba(228, 246, 255, 0.68) 100%),
+    url("./top-back.png") center bottom / cover no-repeat;
 }
 
 .system-statusbar {
@@ -165,9 +164,9 @@ a {
 .hero-mascot {
   position: absolute;
   right: 8px;
-  bottom: -14px;
-  width: 108px;
-  height: 120px;
+  bottom: -6px;
+  width: 104px;
+  height: 112px;
   object-fit: contain;
   object-position: center bottom;
   pointer-events: none;
@@ -250,25 +249,25 @@ a {
 
 .report-card {
   margin-top: 12px;
-  min-height: 80px;
+  min-height: 96px;
   display: grid;
-  grid-template-columns: 62px 1fr 54px;
+  grid-template-columns: 56px minmax(0, 1fr) 44px;
   align-items: center;
-  gap: 12px;
-  padding: 14px;
+  gap: 10px;
+  padding: 12px;
   border-radius: 24px;
-  background: linear-gradient(135deg, #ffffff 0%, #eef8ff 100%);
+  background: linear-gradient(135deg, #fafdff 0%, #e9f6ff 100%);
   border: 1px solid rgba(231, 237, 247, 0.85);
   box-shadow: var(--shadow);
 }
 
 .report-visual {
-  width: 58px;
-  height: 58px;
+  width: 56px;
+  height: 56px;
   display: grid;
   place-items: center;
-  border-radius: 20px;
-  background: #eaf3ff;
+  border-radius: 18px;
+  background: #dff1ff;
 }
 
 .report-visual img {
@@ -280,19 +279,27 @@ a {
   color: var(--primary-deep);
 }
 
-.report-card h2 {
-  margin: 0;
-  color: var(--primary-deep);
-  font-size: 21px;
-  line-height: 28px;
-  font-weight: 800;
+.report-copy {
+  min-width: 0;
+  text-align: left;
 }
 
-.report-card p:last-child {
+.report-copy h2 {
   margin: 0;
-  color: var(--muted);
+  color: var(--primary-deep);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.report-copy p {
+  margin: 4px 0 0;
+  color: #7892b2;
   font-size: 13px;
-  line-height: 19px;
+  line-height: 18px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .report-action {
@@ -329,28 +336,28 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .title-mark {
   width: 8px;
   height: 24px;
   border-radius: 999px;
-  background: #00a1f6;
+  background: var(--primary);
 }
 
 .title-mark.green {
-  background: #00a1f6;
+  background: #7bc832;
 }
 
 .title-mark.purple {
-  background: #00a1f6;
+  background: var(--purple);
 }
 
 .section-title h2 {
   margin: 0;
-  color: #4d4d4d;
-  font-size: 22px;
+  color: var(--text);
+  font-size: 20px;
   line-height: 28px;
   font-weight: 800;
 }
@@ -362,19 +369,23 @@ a {
 }
 
 .oral-card {
-  min-height: 86px;
+  min-height: 88px;
   border-radius: 18px;
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 12px 8px;
+  gap: 10px;
+  padding: 12px 14px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.oral-card:active {
+  transform: scale(0.97);
 }
 
 .oral-card img {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   flex: 0 0 auto;
 }
 
@@ -387,24 +398,24 @@ a {
   white-space: nowrap;
 }
 
-.oral-card.warm {
-  background: rgba(255, 154, 77, 0.04);
-  border-color: rgba(255, 154, 77, 0.12);
+.oral-card.blue {
+  background: rgba(37, 196, 242, 0.1);
+  border: 1px solid rgba(37, 196, 242, 0.24);
 }
 
-.oral-card.coral {
-  background: rgba(255, 154, 77, 0.04);
-  border-color: rgba(255, 154, 77, 0.12);
+.oral-card.orange {
+  background: rgba(255, 154, 77, 0.1);
+  border: 1px solid rgba(255, 154, 77, 0.24);
 }
 
 .oral-card.violet {
-  background: rgba(255, 154, 77, 0.04);
-  border-color: rgba(255, 154, 77, 0.12);
+  background: rgba(122, 115, 245, 0.09);
+  border: 1px solid rgba(122, 115, 245, 0.22);
 }
 
-.oral-card.sky {
-  background: rgba(255, 154, 77, 0.04);
-  border-color: rgba(255, 154, 77, 0.12);
+.oral-card.green {
+  background: rgba(123, 200, 50, 0.1);
+  border: 1px solid rgba(123, 200, 50, 0.24);
 }
 
 .pinyin-grid {
@@ -414,23 +425,29 @@ a {
 }
 
 .pinyin-card {
-  min-height: 82px;
+  min-height: 84px;
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 12px;
   border-radius: 18px;
-  background: rgba(77, 148, 255, 0.04);
-  border: 1px solid rgba(77, 148, 255, 0.12);
+  background: rgba(37, 196, 242, 0.08);
+  border: 1px solid rgba(37, 196, 242, 0.2);
+  transition: transform 150ms ease;
+}
+
+.pinyin-card:active {
+  transform: scale(0.97);
 }
 
 .pinyin-card.mint {
-  background: rgba(77, 148, 255, 0.04);
+  background: rgba(123, 200, 50, 0.09);
+  border-color: rgba(123, 200, 50, 0.22);
 }
 
 .pinyin-card img {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   flex: 0 0 auto;
 }
 
@@ -449,19 +466,25 @@ a {
 }
 
 .mini-card {
-  min-height: 104px;
+  min-height: 100px;
   display: grid;
-  grid-template-rows: 58px 1fr;
+  grid-template-rows: 52px 1fr;
   place-items: center;
-  padding: 10px 6px 9px;
+  padding: 10px 4px 9px;
   border-radius: 18px;
-  background: rgba(0, 194, 138, 0.04);
-  border: 1px solid rgba(0, 194, 138, 0.12);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  transition: transform 150ms ease;
+}
+
+.mini-card:active {
+  transform: scale(0.96);
 }
 
 .mini-card img {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
   align-self: end;
 }
 
@@ -471,7 +494,6 @@ a {
   line-height: 16px;
   font-weight: 800;
   text-align: center;
-  max-width: 74px;
 }
 
 .tabbar {
