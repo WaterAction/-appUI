@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>普通話 App 第3版｜任務頁</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell tasks-shell" aria-label="普通話任務頁">
+      <header class="system-statusbar" aria-label="手機系統狀態欄">
+        <time datetime="09:41">9:41</time>
+        <img
+          src="./assets/ios-status-icons.svg"
+          alt="滿格蜂窩訊號、Wi-Fi、100% 電量"
+        />
+      </header>
+
+      <section class="task-hero" aria-label="任務">
+        <h1>任務</h1>
+        <a class="task-report-link" href="#" aria-label="查看學習報告">
+          <img src="./1x-v2-2透明版/learning-report-icon-36px-transparent.png" alt="" />
+        </a>
+      </section>
+
+      <nav class="task-segment" aria-label="任務狀態">
+        <button class="segment-item" type="button" data-state="todo" aria-controls="todo-tasks" aria-pressed="false">未完成</button>
+        <button class="segment-item active" type="button" data-state="done" aria-controls="done-tasks" aria-pressed="true">已完成</button>
+        <button class="segment-item" type="button" data-state="expired" aria-controls="expired-tasks" aria-pressed="false">已過期</button>
+      </nav>
+
+      <section class="task-list task-panel" id="todo-tasks" data-panel="todo" aria-label="未完成任務列表" hidden>
+        <article class="task-assignment-card">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/pronunciation-assessment-selected-36px-transparent.png" alt="" />
+                <p>發言評測</p>
+                <span class="scene-tag daily">日常</span>
+              </header>
+              <h2>《春曉》</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>陳老師</span>
+            <time datetime="2026-07-21">2026-07-21</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/scene-dialogue-selected-36px-transparent.png" alt="" />
+                <p>場景對話</p>
+                <span class="scene-tag daily">日常</span>
+              </header>
+              <h2>到遊樂場去</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>王老師</span>
+            <time datetime="2026-07-21">2026-07-21</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/personal-short-speech-selected-36px-transparent.png" alt="" />
+                <p>個人短講</p>
+                <span class="scene-tag special">專項</span>
+              </header>
+              <h2>我的暑假計劃</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>李老師</span>
+            <time datetime="2026-07-22">2026-07-22</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/look-at-picture-and-speak-selected-36px-transparent.png" alt="" />
+                <p>看圖說話</p>
+                <span class="scene-tag special">專項</span>
+              </header>
+              <h2>校園一角</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>張老師</span>
+            <time datetime="2026-07-23">2026-07-23</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/pinyin-learning-selected-36px-transparent.png" alt="" />
+                <p>拼音學習</p>
+                <span class="scene-tag daily">日常</span>
+              </header>
+              <h2>聲母與韻母</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>劉老師</span>
+            <time datetime="2026-07-24">2026-07-24</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/pinyin-practice-selected-36px-transparent.png" alt="" />
+                <p>拼音練習</p>
+                <span class="scene-tag daily">日常</span>
+              </header>
+              <h2>zh ch sh 練習</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>趙老師</span>
+            <time datetime="2026-07-24">2026-07-24</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/listening-practice-selected-36px-transparent.png" alt="" />
+                <p>聽力練習</p>
+                <span class="scene-tag daily">日常</span>
+              </header>
+              <h2>聽短文回答問題</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>周老師</span>
+            <time datetime="2026-07-25">2026-07-25</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/composition-correction-selected-36px-transparent.png" alt="" />
+                <p>作文批改</p>
+                <span class="scene-tag assess">評估</span>
+              </header>
+              <h2>我的好朋友</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>吳老師</span>
+            <time datetime="2026-07-26">2026-07-26</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/composition-correction-dse-selected-36.png" alt="" />
+                <p>作文批改DSE</p>
+                <span class="scene-tag special">專項</span>
+              </header>
+              <h2>短文寫作練習</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>黃老師</span>
+            <time datetime="2026-07-27">2026-07-27</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/task-selected-36px-transparent.png" alt="" />
+                <p>綜合評測</p>
+                <span class="scene-tag assess">評估</span>
+              </header>
+              <h2>單元綜合任務</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>林老師</span>
+            <time datetime="2026-07-28">2026-07-28</time>
+          </footer>
+        </article>
+      </section>
+
+      <section class="task-list task-panel" id="done-tasks" data-panel="done" aria-label="已完成任務列表">
+        <article class="task-assignment-card completed">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/pronunciation-assessment-selected-36px-transparent.png" alt="" />
+                <p>發言評測</p>
+                <span class="scene-tag daily">日常</span>
+                <span class="assignment-tags">
+                  <span class="result-pill blue">最高得分</span>
+                </span>
+              </header>
+              <h2>《風》</h2>
+            </div>
+            <aside class="task-side">
+              <strong class="score">96</strong>
+            </aside>
+          </div>
+          <footer class="assignment-meta">
+            <span>李老師</span>
+            <time datetime="2026-07-18">2026-07-18</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card completed">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/scene-dialogue-selected-36px-transparent.png" alt="" />
+                <p>場景對話</p>
+                <span class="scene-tag daily">日常</span>
+                <span class="assignment-tags">
+                  <span class="result-pill green">最快提交</span>
+                </span>
+              </header>
+              <h2>到遊樂場去</h2>
+            </div>
+            <aside class="task-side">
+              <strong class="score">92.5</strong>
+            </aside>
+          </div>
+          <footer class="assignment-meta">
+            <span>王老師</span>
+            <time datetime="2026-07-18">2026-07-18</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card completed">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/personal-short-speech-selected-36px-transparent.png" alt="" />
+                <p>個人短講</p>
+                <span class="scene-tag special">專項</span>
+                <span class="assignment-tags">
+                  <span class="result-pill blue">最高得分</span>
+                </span>
+              </header>
+              <h2>我想感謝的人</h2>
+            </div>
+            <aside class="task-side">
+              <strong class="score">88</strong>
+            </aside>
+          </div>
+          <footer class="assignment-meta">
+            <span>陳老師</span>
+            <time datetime="2026-07-14">2026-07-14</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card completed">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/look-at-picture-and-speak-selected-36px-transparent.png" alt="" />
+                <p>看圖說話</p>
+                <span class="scene-tag special">專項</span>
+                <span class="assignment-tags">
+                  <span class="result-pill green">最快提交</span>
+                </span>
+              </header>
+              <h2>熱鬧的街市</h2>
+            </div>
+            <aside class="task-side">
+              <strong class="score">90</strong>
+            </aside>
+          </div>
+          <footer class="assignment-meta">
+            <span>張老師</span>
+            <time datetime="2026-07-13">2026-07-13</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card completed">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/pinyin-learning-selected-36px-transparent.png" alt="" />
+                <p>拼音學習</p>
+                <span class="scene-tag daily">日常</span>
+                <span class="assignment-tags">
+                  <span class="result-pill blue">最高得分</span>
+                </span>
+              </header>
+              <h2>聲調基礎</h2>
+            </div>
+            <aside class="task-side">
+              <strong class="score">100</strong>
+            </aside>
+          </div>
+          <footer class="assignment-meta">
+            <span>劉老師</span>
+            <time datetime="2026-07-12">2026-07-12</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card completed">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/pinyin-practice-selected-36px-transparent.png" alt="" />
+                <p>拼音練習</p>
+                <span class="scene-tag daily">日常</span>
+                <span class="assignment-tags">
+                  <span class="result-pill green">最快提交</span>
+                </span>
+              </header>
+              <h2>前鼻音後鼻音</h2>
+            </div>
+            <aside class="task-side">
+              <strong class="score">94</strong>
+            </aside>
+          </div>
+          <footer class="assignment-meta">
+            <span>趙老師</span>
+            <time datetime="2026-07-11">2026-07-11</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card completed">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/listening-practice-selected-36px-transparent.png" alt="" />
+                <p>聽力練習</p>
+                <span class="scene-tag daily">日常</span>
+                <span class="assignment-tags">
+                  <span class="result-pill blue">最高得分</span>
+                </span>
+              </header>
+              <h2>聽故事選答案</h2>
+            </div>
+            <aside class="task-side">
+              <strong class="score">91</strong>
+            </aside>
+          </div>
+          <footer class="assignment-meta">
+            <span>周老師</span>
+            <time datetime="2026-07-10">2026-07-10</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card completed">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/composition-correction-selected-36px-transparent.png" alt="" />
+                <p>作文批改</p>
+                <span class="scene-tag assess">評估</span>
+                <span class="assignment-tags">
+                  <span class="result-pill green">最快提交</span>
+                </span>
+              </header>
+              <h2>一次難忘的活動</h2>
+            </div>
+            <aside class="task-side">
+              <strong class="reviewing">
+                <i data-lucide="clock" aria-hidden="true"></i>
+                評分中
+              </strong>
+            </aside>
+          </div>
+          <footer class="assignment-meta">
+            <span>吳老師</span>
+            <time datetime="2026-07-09">2026-07-09</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card completed">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/composition-correction-dse-selected-36.png" alt="" />
+                <p>作文批改DSE</p>
+                <span class="scene-tag special">專項</span>
+                <span class="assignment-tags">
+                  <span class="result-pill blue">最高得分</span>
+                </span>
+              </header>
+              <h2>DSE 短文寫作</h2>
+            </div>
+            <aside class="task-side">
+              <strong class="score">86</strong>
+            </aside>
+          </div>
+          <footer class="assignment-meta">
+            <span>黃老師</span>
+            <time datetime="2026-07-08">2026-07-08</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card completed">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/task-selected-36px-transparent.png" alt="" />
+                <p>綜合評測</p>
+                <span class="scene-tag assess">評估</span>
+                <span class="assignment-tags">
+                  <span class="result-pill blue">最高得分</span>
+                  <span class="result-pill green">最快提交</span>
+                </span>
+              </header>
+              <h2>綜合評測任務</h2>
+            </div>
+            <aside class="task-side">
+              <strong class="score">350</strong>
+            </aside>
+          </div>
+          <footer class="assignment-meta">
+            <span>林老師</span>
+            <time datetime="2026-07-07">2026-07-07</time>
+          </footer>
+        </article>
+      </section>
+
+      <section class="task-list task-panel" id="expired-tasks" data-panel="expired" aria-label="已過期任務列表" hidden>
+        <article class="task-assignment-card expired">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/pronunciation-assessment-selected-36px-transparent.png" alt="" />
+                <p>發言評測</p>
+                <span class="scene-tag daily">日常</span>
+              </header>
+              <h2>《長歌行》</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>陳老師</span>
+            <time datetime="2025-09-30">2025-09-30</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card expired">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/scene-dialogue-selected-36px-transparent.png" alt="" />
+                <p>場景對話</p>
+                <span class="scene-tag daily">日常</span>
+              </header>
+              <h2>在圖書館借書</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>王老師</span>
+            <time datetime="2025-10-02">2025-10-02</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card expired">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/personal-short-speech-selected-36px-transparent.png" alt="" />
+                <p>個人短講</p>
+                <span class="scene-tag special">專項</span>
+              </header>
+              <h2>我想感謝的人</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>李老師</span>
+            <time datetime="2025-10-04">2025-10-04</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card expired">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/look-at-picture-and-speak-selected-36px-transparent.png" alt="" />
+                <p>看圖說話</p>
+                <span class="scene-tag special">專項</span>
+              </header>
+              <h2>公園的一天</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>張老師</span>
+            <time datetime="2025-10-06">2025-10-06</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card expired">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/pinyin-learning-selected-36px-transparent.png" alt="" />
+                <p>拼音學習</p>
+                <span class="scene-tag daily">日常</span>
+              </header>
+              <h2>複韻母學習</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>劉老師</span>
+            <time datetime="2025-10-08">2025-10-08</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card expired">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/pinyin-practice-selected-36px-transparent.png" alt="" />
+                <p>拼音練習</p>
+                <span class="scene-tag daily">日常</span>
+              </header>
+              <h2>整體認讀音節</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>趙老師</span>
+            <time datetime="2025-10-10">2025-10-10</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card expired">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/listening-practice-selected-36px-transparent.png" alt="" />
+                <p>聽力練習</p>
+                <span class="scene-tag daily">日常</span>
+              </header>
+              <h2>聽對話填答案</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>周老師</span>
+            <time datetime="2025-10-12">2025-10-12</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card expired">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/composition-correction-selected-36px-transparent.png" alt="" />
+                <p>作文批改</p>
+                <span class="scene-tag assess">評估</span>
+              </header>
+              <h2>我的一次旅行</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>吳老師</span>
+            <time datetime="2025-10-14">2025-10-14</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card expired">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/composition-correction-dse-selected-36.png" alt="" />
+                <p>作文批改DSE</p>
+                <span class="scene-tag special">專項</span>
+              </header>
+              <h2>DSE 應用文練習</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>黃老師</span>
+            <time datetime="2025-10-16">2025-10-16</time>
+          </footer>
+        </article>
+
+        <article class="task-assignment-card expired">
+          <div class="assignment-body">
+            <div class="assignment-copy">
+              <header class="assignment-head">
+                <img src="./1x-v2-2透明版/task-selected-36px-transparent.png" alt="" />
+                <p>綜合評測</p>
+                <span class="scene-tag assess">評估</span>
+              </header>
+              <h2>期中綜合測驗</h2>
+            </div>
+          </div>
+          <footer class="assignment-meta">
+            <span>林老師</span>
+            <time datetime="2025-10-18">2025-10-18</time>
+          </footer>
+        </article>
+      </section>
+
+      <nav class="tabbar" aria-label="底部導航">
+        <a class="tab" href="./index.html">
+          <i data-lucide="book-open" aria-hidden="true"></i>
+          <span>學習</span>
+        </a>
+        <a class="tab active" href="./tasks.html">
+          <i data-lucide="clipboard-list" aria-hidden="true"></i>
+          <span>任務</span>
+        </a>
+        <a class="tab" href="#">
+          <i data-lucide="share-2" aria-hidden="true"></i>
+          <span>拓展課</span>
+        </a>
+        <a class="tab" href="#">
+          <i data-lucide="video" aria-hidden="true"></i>
+          <span>直播課</span>
+        </a>
+      </nav>
+
+      <div class="device-home-area" aria-hidden="true">
+        <img class="home-indicator" src="./assets/ios-home-indicator.svg" alt="" />
+      </div>
+    </main>
+    <script src="./assets/lucide.min.js"></script>
+    <script>
+      globalThis.lucide?.createIcons();
+
+      document.querySelectorAll(".segment-item").forEach((segment) => {
+        segment.addEventListener("click", () => {
+          const state = segment.dataset.state;
+
+          document.querySelectorAll(".segment-item").forEach((item) => {
+            const isActive = item === segment;
+            item.classList.toggle("active", isActive);
+            item.setAttribute("aria-pressed", String(isActive));
+          });
+
+          document.querySelectorAll(".task-panel").forEach((panel) => {
+            panel.hidden = panel.dataset.panel !== state;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
