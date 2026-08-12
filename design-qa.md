@@ -16,8 +16,9 @@ final result: blocked
 
 - `Study.html` exists and is linked from the learning tab in `index.html`, `tasks.html`, `extension.html`, and `live.html`.
 - The page order matches the requested sketch: top learner/action row, learning-report carousel, task progress, three application cards, and the common-app grid.
-- The top row uses `assets/deer-avatar.png`, `learning-record-selected@3x.png`, and `ranking-selected@3x.png`; the two right-side action icons render without a white container background.
-- The report carousel uses `learning-report-card-background.png` plus 3x transparent icons, with a larger `184px` carousel area and `168px` banner track.
+- The top row uses `assets/deer-avatar.png`, `3x-V2/learning-records-overview-selected-108.png`, and `3x-V2/ranking-selected@3x.png`; the two right-side action icons render without a white container background.
+- The report carousel uses `learning-report-card-background.png` plus local icon assets, with a larger `184px` carousel area and `168px` banner track.
+- The report carousel ranking icon now also points to `3x-V2/ranking-selected@3x.png`, removing the stale missing `3x-透明版/ranking-selected@3x.png` reference.
 - The top blue background is now a separate `study-hero::before` layer with `148px` height instead of wrapping the full carousel area.
 - The report carousel is stacked above the blue background with `z-index: 2`, so the banner overlaps the top background rather than being contained by it.
 - The carousel dots are positioned inside the banner layer so they remain visible after the blue background height reduction.
