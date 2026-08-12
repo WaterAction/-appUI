@@ -27,11 +27,13 @@ final result: blocked
 - The task progress module uses a light rounded background panel with no visible outer border/frame.
 - The visible `常用應用` heading has been removed from `Study.html`.
 - The common app shortcuts now sit inside a light rounded background panel matching the reference block treatment.
-- The three application cards are Traditional Chinese: `口語`, `練習`, `作文`.
-- The three application-card icons now load from `3x-V2`: `口语_选中_108x108_透明Icon.png`, `练习_选中_108x108_透明Icon.png`, and `作文_选中_108x108_透明Icon.png`.
-- The common apps are Traditional Chinese and visible by default: `發音評測`, `場景對話`, `個人短講`, `看圖說話`, `拼音學習`, `拼音練習`, `小鹿認字`, `聆聽練習`, `作文批改`, `作文批改DSE`.
-- The "更多" control has been removed; `作文批改` and `作文批改DSE` render inside the same common-app grid/background block by default.
-- All local `img src` paths in the HTML files exist.
+- The three application cards now show the three most-used apps in Traditional Chinese: `發音評測`, `場景對話`, and `個人短講`.
+- The three application-card icons now reuse the matching transparent 3x shortcut assets: `pronunciation-assessment-selected@3x.png`, `scene-dialogue-selected@3x.png`, and `personal-short-speech-selected@3x.png`.
+- The common-app grid now starts from `看圖說話` and keeps only: `看圖說話`, `拼音學習`, `拼音練習`, `小鹿認字`, `聆聽練習`, `作文批改`, `作文批改DSE`.
+- The seven common-app labels from `看圖說話` through `作文批改DSE` now use `13px` text.
+- The DSE correction label now renders as two lines: `作文批改` and `（DSE）`.
+- The "更多" control remains removed; `作文批改` and `作文批改DSE` render inside the same common-app grid/background block by default.
+- All local `img src` paths in `Study.html` exist; 25 image references were checked after this revision.
 - The new page uses local image assets and icons from `3x-透明版` where matching 3x assets are available.
 - `extension.html` course cards no longer use the old `拓展` badge; card badges now show `未開始` or `已結束`.
 - Upcoming extension cards conditionally show `進入教室`, while ended extension cards conditionally show `查看回放` only on cards with replay access.
@@ -47,7 +49,7 @@ final result: blocked
 - Live and extension `查看課件` actions now use a gray-blue outline secondary-button treatment with a white surface, border, and lighter shadow.
 - Live and extension `查看回放` actions remain gray-blue filled primary buttons with a stronger clickable shadow.
 - Live ended-course cards and extension ended-course cards now remain fully opaque, with no gray overlay or ended-state text dimming; their card background is the extremely light gray-blue `#F8FAFC`.
-- Browser availability was rechecked for this revision; the Browser runtime returned no available browser instances, so screenshot comparison remains blocked.
+- Browser availability was rechecked for the latest Study revision; the Browser runtime returned no available browser instances, so screenshot comparison remains blocked.
 
 ### Known Asset Mapping Notes
 
