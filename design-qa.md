@@ -1,5 +1,56 @@
 # Design QA
 
+## Current Study.html QA
+
+final result: blocked
+
+### Comparison Target
+
+- Source visual truth: the first conversation attachment, with the second hand-drawn attachment defining the required content order.
+- Implementation: `Study.html` and `styles.css` in this folder.
+- Intended CSS viewport: `393x852 px`, device scale factor `1`.
+- Implementation screenshot: unavailable; the Browser plugin reported no available browser instance.
+- State to verify: learning tab selected, report carousel at first slide, task progress visible, all common app shortcuts visible in the same grid.
+
+### Static Verification
+
+- `Study.html` exists and is linked from the learning tab in `index.html`, `tasks.html`, `extension.html`, and `live.html`.
+- The page order matches the requested sketch: top learner/action row, learning-report carousel, task progress, three application cards, and the common-app grid.
+- The top row uses `assets/deer-avatar.png`, `learning-record-selected@3x.png`, and `ranking-selected@3x.png`; the two right-side action icons render without a white container background.
+- The report carousel uses `learning-report-card-background.png` plus 3x transparent icons, with a larger `184px` carousel area and `168px` banner track.
+- The top blue background is now a separate `study-hero::before` layer with `148px` height instead of wrapping the full carousel area.
+- The report carousel is stacked above the blue background with `z-index: 2`, so the banner overlaps the top background rather than being contained by it.
+- The carousel dots are positioned inside the banner layer so they remain visible after the blue background height reduction.
+- The top background remains a short layered blue header behind the banner, and the previously added left/right angled side wings have been removed.
+- The hero reserved height is reduced to `284px` and the progress card margin is set to `0`, moving `任務進度` closer to the banner.
+- The progress module title is `任務進度`, the former `Red pocket` pill is removed, and the progress bar is set to 70% with the total task copy.
+- The task progress module uses a light rounded background panel with no visible outer border/frame.
+- The visible `常用應用` heading has been removed from `Study.html`.
+- The common app shortcuts now sit inside a light rounded background panel matching the reference block treatment.
+- The three application cards are Traditional Chinese: `口語`, `練習`, `作文`.
+- The three application-card icons now load from `3x-V2`: `口语_选中_108x108_透明Icon.png`, `练习_选中_108x108_透明Icon.png`, and `作文_选中_108x108_透明Icon.png`.
+- The common apps are Traditional Chinese and visible by default: `發音評測`, `場景對話`, `個人短講`, `看圖說話`, `拼音學習`, `拼音練習`, `小鹿認字`, `聆聽練習`, `作文批改`, `作文批改DSE`.
+- The "更多" control has been removed; `作文批改` and `作文批改DSE` render inside the same common-app grid/background block by default.
+- All local `img src` paths in the HTML files exist.
+- The new page uses local image assets and icons from `3x-透明版` where matching 3x assets are available.
+
+### Known Asset Mapping Notes
+
+- `3x-透明版` does not contain exact `拼音學習` or `聆聽練習` file names.
+- `拼音學習` is mapped to `hsk-video-learning-selected@3x.png`.
+- `聆聽練習` is mapped to `learning-record-selected@3x.png`.
+
+### Finding
+
+- [P2] Browser-rendered comparison is unavailable.
+  - Evidence: `agent.browsers.list()` returned an empty list, so no in-app browser instance was available.
+  - Impact: final screenshot comparison against the reference image cannot receive a valid pass.
+  - Fix: open `Study.html` in an available browser at `393x852`, compare against the supplied reference and sketch, then update this report.
+
+---
+
+## Previous Learning Page QA
+
 final result: blocked
 
 ## Comparison Target

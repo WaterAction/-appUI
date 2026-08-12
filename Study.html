@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>普通話 App 第3版｜Study</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell study-shell" aria-label="普通話學習首頁">
+      <section class="study-hero" aria-label="學習首頁頂部">
+        <header class="system-statusbar study-statusbar" aria-label="手機系統狀態欄">
+          <time datetime="09:41">9:41</time>
+          <img
+            src="./assets/ios-status-icons.svg"
+            alt="滿格蜂窩訊號、Wi-Fi、100% 電量"
+          />
+        </header>
+
+        <div class="study-topline">
+          <a class="student-chip" href="#" aria-label="學員資料">
+            <img src="./assets/deer-avatar.png" alt="劉小川頭像" />
+            <span>
+              <strong>劉小川</strong>
+              <em>S1 A班</em>
+            </span>
+          </a>
+
+          <div class="study-actions" aria-label="學習入口">
+            <a class="study-action" href="#" aria-label="練習記錄">
+              <img src="./3x-透明版/learning-record-selected@3x.png" alt="" />
+            </a>
+            <a class="study-action" href="#" aria-label="排行榜">
+              <img src="./3x-透明版/ranking-selected@3x.png" alt="" />
+            </a>
+          </div>
+        </div>
+
+        <section class="report-carousel" aria-label="學習報告輪播">
+          <div class="report-track" id="reportTrack">
+            <article class="report-slide blue-report">
+              <img class="report-slide-bg" src="./learning-report-card-background.png" alt="" />
+              <div class="report-slide-copy">
+                <span>FREE STUDY FOR MEMBERS</span>
+                <h1>7月學習報告</h1>
+                <a href="#">OPEN UP</a>
+              </div>
+              <img class="report-slide-icon" src="./3x-透明版/learning-record-selected@3x.png" alt="" />
+            </article>
+            <article class="report-slide green-report">
+              <img class="report-slide-bg" src="./learning-report-card-background.png" alt="" />
+              <div class="report-slide-copy">
+                <span>STUDY GROWTH</span>
+                <h1>本週練習回顧</h1>
+                <a href="#">查看</a>
+              </div>
+              <img class="report-slide-icon" src="./3x-透明版/pending-selected@3x.png" alt="" />
+            </article>
+            <article class="report-slide purple-report">
+              <img class="report-slide-bg" src="./learning-report-card-background.png" alt="" />
+              <div class="report-slide-copy">
+                <span>CLASS RANK</span>
+                <h1>排行榜更新</h1>
+                <a href="#">查看</a>
+              </div>
+              <img class="report-slide-icon" src="./3x-透明版/ranking-selected@3x.png" alt="" />
+            </article>
+          </div>
+          <div class="report-dots" aria-hidden="true">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </section>
+      </section>
+
+      <section class="study-progress" aria-label="任務進度">
+        <div class="progress-head">
+          <strong>任務進度</strong>
+        </div>
+        <div class="progress-bar" aria-hidden="true">
+          <span style="width: 70%"></span>
+        </div>
+        <div class="progress-meta">
+          <span>已完成 70%</span>
+          <span>總任務 100</span>
+        </div>
+      </section>
+
+      <section class="study-section" aria-label="應用分類">
+        <div class="study-section-title">
+          <span></span>
+          <h2>應用</h2>
+        </div>
+        <div class="study-feature-grid">
+          <a class="feature-card oral" href="#">
+            <img src="./3x-V2/口语_选中_108x108_透明Icon.png" alt="" />
+            <strong>口語</strong>
+          </a>
+          <a class="feature-card practice" href="#">
+            <img src="./3x-V2/练习_选中_108x108_透明Icon.png" alt="" />
+            <strong>練習</strong>
+          </a>
+          <a class="feature-card essay" href="#">
+            <img src="./3x-V2/作文_选中_108x108_透明Icon.png" alt="" />
+            <strong>作文</strong>
+          </a>
+        </div>
+      </section>
+
+      <section class="study-section quick-section" aria-label="常用應用">
+        <div class="quick-grid">
+          <a class="quick-app" href="#">
+            <img src="./3x-透明版/pronunciation-assessment-selected@3x.png" alt="" />
+            <span>發音評測</span>
+          </a>
+          <a class="quick-app" href="#">
+            <img src="./3x-透明版/scene-dialogue-selected@3x.png" alt="" />
+            <span>場景對話</span>
+          </a>
+          <a class="quick-app" href="#">
+            <img src="./3x-透明版/personal-short-speech-selected@3x.png" alt="" />
+            <span>個人短講</span>
+          </a>
+          <a class="quick-app" href="#">
+            <img src="./3x-透明版/picture-description-selected@3x.png" alt="" />
+            <span>看圖說話</span>
+          </a>
+          <a class="quick-app" href="#">
+            <img src="./3x-透明版/hsk-video-learning-selected@3x.png" alt="" />
+            <span>拼音學習</span>
+          </a>
+          <a class="quick-app" href="#">
+            <img src="./3x-透明版/pinyin-practice-selected@3x.png" alt="" />
+            <span>拼音練習</span>
+          </a>
+          <a class="quick-app" href="#">
+            <img src="./3x-透明版/deer-character-selected@3x.png" alt="" />
+            <span>小鹿認字</span>
+          </a>
+          <a class="quick-app" href="#">
+            <img src="./3x-透明版/learning-record-selected@3x.png" alt="" />
+            <span>聆聽練習</span>
+          </a>
+
+          <div class="quick-extra-group" id="extraApps">
+            <a class="quick-app" href="#">
+              <img src="./3x-透明版/essay-correction-selected@3x.png" alt="" />
+              <span>作文批改</span>
+            </a>
+            <a class="quick-app" href="#">
+              <img src="./3x-透明版/essay-correction-dse-selected@3x.png" alt="" />
+              <span>作文批改DSE</span>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <nav class="tabbar" aria-label="底部導航">
+        <a class="tab active" href="./Study.html">
+          <img class="tab-icon" src="./3x-透明版/learning-tab-selected@3x.png" alt="" />
+          <span>學習</span>
+        </a>
+        <a class="tab" href="./tasks.html">
+          <img class="tab-icon tab-icon-task" src="./3x-透明版/task-tab-selected@3x.png" alt="" />
+          <span>任務</span>
+        </a>
+        <a class="tab" href="./extension.html">
+          <img class="tab-icon" src="./3x-透明版/extension-course-tab-unselected@3x.png" alt="" />
+          <span>拓展課</span>
+        </a>
+        <a class="tab" href="./live.html">
+          <img class="tab-icon" src="./3x-透明版/live-class-tab-unselected@3x.png" alt="" />
+          <span>直播課</span>
+        </a>
+      </nav>
+
+      <div class="device-home-area" aria-hidden="true">
+        <img class="home-indicator" src="./assets/ios-home-indicator.svg" alt="" />
+      </div>
+    </main>
+    <script src="./assets/lucide.min.js"></script>
+    <script>
+      globalThis.lucide?.createIcons();
+
+      const track = document.querySelector("#reportTrack");
+      const dots = document.querySelectorAll(".report-dots span");
+      let slideIndex = 0;
+
+      const showSlide = (index) => {
+        slideIndex = index % dots.length;
+        track.scrollTo({
+          left: slideIndex * track.clientWidth,
+          behavior: "smooth",
+        });
+        dots.forEach((dot, dotIndex) => dot.classList.toggle("active", dotIndex === slideIndex));
+      };
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => showSlide(index));
+      });
+
+      setInterval(() => showSlide(slideIndex + 1), 3600);
+
+    </script>
+  </body>
+</html>
