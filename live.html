@@ -62,34 +62,109 @@
         </header>
 
         <div class="live-course-list">
-          <article class="live-course-card">
+          <article class="live-course-card is-upcoming">
             <div class="live-card-top">
-              <div>
-                <span class="live-status">未開始</span>
-                <h3>第1講：第一課</h3>
-              </div>
-              <a class="course-action live-action" href="#">預習</a>
+              <span class="live-status upcoming">未開始</span>
+            </div>
+            <div class="live-title-row">
+              <h3>第1講：第一課</h3>
+              <a class="live-enter-circle" href="#" aria-label="進入第1講課程">
+                <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
             </div>
             <div class="live-time-row">
               <i data-lucide="clock" aria-hidden="true"></i>
               <strong>04:00—04:45</strong>
             </div>
             <time datetime="2026-07-20">2026-07-20</time>
+            <footer class="live-card-actions">
+              <a class="course-action live-action" href="#">預習</a>
+            </footer>
           </article>
 
-          <article class="live-course-card">
+          <article class="live-course-card is-live">
             <div class="live-card-top">
-              <div>
-                <span class="live-status">未開始</span>
-                <h3>第2講：第二課</h3>
-              </div>
-              <a class="course-action live-action" href="#">預習</a>
+              <span class="live-status ongoing">上課中</span>
+              <span class="attendance-tag attended">已出勤</span>
+            </div>
+            <div class="live-title-row">
+              <h3>第2講：第二課</h3>
+              <a class="live-enter-circle" href="#" aria-label="進入第2講課程">
+                <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
             </div>
             <div class="live-time-row">
               <i data-lucide="clock" aria-hidden="true"></i>
               <strong>04:00—04:45</strong>
             </div>
             <time datetime="2026-07-27">2026-07-27</time>
+            <footer class="live-card-actions">
+              <a class="course-action live-action enter-course" href="#">進入教室</a>
+            </footer>
+          </article>
+
+          <article class="live-course-card is-ended">
+            <div class="live-card-top">
+              <span class="live-status ended">已結束</span>
+              <span class="attendance-tag attended">已出勤</span>
+            </div>
+            <div class="live-title-row">
+              <h3>第3講：第三課</h3>
+              <a class="live-enter-circle" href="#" aria-label="查看第3講課程詳情">
+                <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="live-time-row">
+              <i data-lucide="clock" aria-hidden="true"></i>
+              <strong>04:00—04:45</strong>
+            </div>
+            <time datetime="2026-08-03">2026-08-03</time>
+            <footer class="live-card-actions">
+              <a class="course-action live-action material" href="#">查看課件</a>
+              <a class="course-action live-action replay" href="#">查看回放</a>
+            </footer>
+          </article>
+
+          <article class="live-course-card is-ended">
+            <div class="live-card-top">
+              <span class="live-status ended">已結束</span>
+              <span class="attendance-tag leave">已請假</span>
+            </div>
+            <div class="live-title-row">
+              <h3>第4講：第四課</h3>
+              <a class="live-enter-circle" href="#" aria-label="查看第4講課程詳情">
+                <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="live-time-row">
+              <i data-lucide="clock" aria-hidden="true"></i>
+              <strong>05:00—05:45</strong>
+            </div>
+            <time datetime="2026-08-10">2026-08-10</time>
+            <footer class="live-card-actions">
+              <a class="course-action live-action material" href="#">查看課件</a>
+            </footer>
+          </article>
+
+          <article class="live-course-card is-ended">
+            <div class="live-card-top">
+              <span class="live-status ended">已結束</span>
+              <span class="attendance-tag absent">缺席</span>
+            </div>
+            <div class="live-title-row">
+              <h3>第5講：第五課</h3>
+              <a class="live-enter-circle" href="#" aria-label="查看第5講課程詳情">
+                <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="live-time-row">
+              <i data-lucide="clock" aria-hidden="true"></i>
+              <strong>05:00—05:45</strong>
+            </div>
+            <time datetime="2026-08-17">2026-08-17</time>
+            <footer class="live-card-actions">
+              <a class="course-action live-action material" href="#">查看課件</a>
+            </footer>
           </article>
         </div>
       </section>

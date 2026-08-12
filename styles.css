@@ -1110,8 +1110,8 @@ a {
 }
 
 .extension-course-card {
-  min-height: 112px;
-  padding: 14px 16px 13px;
+  min-height: 164px;
+  padding: 14px 16px 15px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.97);
   border: 1px solid rgba(231, 237, 247, 0.86);
@@ -1119,10 +1119,10 @@ a {
 }
 
 .course-card-head {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  min-height: 22px;
+  display: grid;
+  justify-items: start;
+  gap: 9px;
+  min-height: 0;
   min-width: 0;
 }
 
@@ -1131,24 +1131,47 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 34px;
-  height: 18px;
-  padding: 0 6px;
-  border-radius: 5px;
-  color: #fff;
-  background: #ff6d5a;
-  font-size: 10px;
-  line-height: 14px;
+  gap: 7px;
+  min-width: 72px;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: #2f8dff;
+  background: #edf6ff;
+  border: 0;
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 900;
   white-space: nowrap;
 }
 
+.course-status::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.course-status.upcoming {
+  color: #2f8dff;
+  background: #edf6ff;
+}
+
+.course-status.ended {
+  color: #7f91a8;
+  background: #f1f5f9;
+}
+
 .extension-course-card h2 {
   margin: 0;
+  width: 100%;
   min-width: 0;
   color: #272a31;
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 900;
   letter-spacing: 0;
   white-space: nowrap;
@@ -1166,11 +1189,8 @@ a {
 
 .course-card-footer {
   min-height: 34px;
-  margin-top: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  margin-top: 14px;
+  display: block;
 }
 
 .course-card-footer span {
@@ -1182,6 +1202,53 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.course-time-block {
+  min-width: 0;
+}
+
+.course-time-row {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #252932;
+}
+
+.course-time-row .lucide {
+  flex: 0 0 auto;
+  width: 25px;
+  height: 25px;
+  stroke-width: 2.5;
+}
+
+.course-time-row strong {
+  min-width: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 900;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.course-time-block time {
+  display: block;
+  margin-top: 2px;
+  color: #8e95a2;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 800;
+}
+
+.course-actions {
+  min-width: 0;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  flex-wrap: wrap;
 }
 
 .course-action {
@@ -1202,33 +1269,43 @@ a {
   white-space: nowrap;
 }
 
+.course-action.enter {
+  min-width: 76px;
+  padding: 0 12px;
+  background: #e7a21f;
+  box-shadow: 0 7px 14px rgba(231, 162, 31, 0.2);
+}
+
 .course-action:active {
   transform: scale(0.98);
 }
 
 .extension-course-card.ended {
-  background: rgba(255, 255, 255, 0.9);
+  background: #F8FAFC;
+  border-color: rgba(211, 224, 239, 0.88);
+  box-shadow: 0 6px 16px rgba(77, 112, 151, 0.07);
 }
 
-.extension-course-card.ended h2 {
-  color: #9fa6b2;
-}
-
-.extension-course-card.ended .course-summary,
-.extension-course-card.ended .course-card-footer span {
-  color: #b0b6c0;
-}
-
-.extension-course-card.ended .course-status {
-  background: rgba(255, 109, 90, 0.5);
+.extension-course-card.ended .course-status.ended {
+  color: #7f91a8;
+  background: #f1f5f9;
 }
 
 .course-action.material {
   min-width: 82px;
-  color: #2477e8;
-  background: rgba(232, 246, 255, 0.96);
-  border: 1px solid rgba(101, 178, 246, 0.42);
-  box-shadow: none;
+  color: #7f94ad;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(143, 164, 189, 0.42);
+  box-shadow: 0 5px 11px rgba(121, 146, 174, 0.1);
+}
+
+.course-action.replay {
+  min-width: 82px;
+  padding: 0 12px;
+  color: #fff;
+  background: #8fa4bd;
+  border: 0;
+  box-shadow: 0 7px 14px rgba(124, 148, 175, 0.2);
 }
 
 .live-shell {
@@ -1243,31 +1320,31 @@ a {
 .live-shortcuts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin: 2px 0 18px;
+  gap: 6px;
+  margin: 0 0 14px;
 }
 
 .live-shortcut {
   min-width: 0;
   display: grid;
   justify-items: center;
-  gap: 8px;
+  gap: 6px;
   color: #5f6673;
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: 800;
   text-align: center;
 }
 
 .live-shortcut-icon {
   position: relative;
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
   display: grid;
   place-items: center;
-  border-radius: 22px;
+  border-radius: 18px;
   background: rgba(235, 247, 255, 0.95);
-  box-shadow: 0 9px 18px rgba(35, 100, 170, 0.08);
+  box-shadow: 0 7px 14px rgba(35, 100, 170, 0.07);
 }
 
 .live-shortcut.violet .live-shortcut-icon {
@@ -1288,8 +1365,8 @@ a {
 
 .live-shortcut-icon img,
 .live-shortcut-icon .lucide {
-  width: 35px;
-  height: 35px;
+  width: 29px;
+  height: 29px;
 }
 
 .live-shortcut-icon .lucide {
@@ -1303,20 +1380,20 @@ a {
 
 .live-shortcut-icon em {
   position: absolute;
-  top: -3px;
+  top: -2px;
   right: -2px;
-  min-width: 20px;
-  height: 20px;
+  min-width: 17px;
+  height: 17px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 5px;
+  padding: 0 4px;
   border-radius: 999px;
   color: #fff;
   background: #ff505d;
-  border: 2px solid rgba(255, 255, 255, 0.96);
-  font-size: 11px;
-  line-height: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.96);
+  font-size: 9px;
+  line-height: 12px;
   font-style: normal;
   font-weight: 900;
 }
@@ -1371,8 +1448,8 @@ a {
 }
 
 .live-course-card {
-  min-height: 166px;
-  padding: 16px 16px 14px;
+  min-height: 182px;
+  padding: 16px 16px 15px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.97);
   border: 1px solid rgba(231, 237, 247, 0.9);
@@ -1381,12 +1458,56 @@ a {
 
 .live-card-top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
+  min-height: 36px;
 }
 
 .live-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 72px;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: #2f8dff;
+  background: #eef7ff;
+  border: 0;
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.live-status::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.live-status.upcoming {
+  color: #2f8dff;
+  background: #edf6ff;
+}
+
+.live-status.ongoing {
+  color: #ff5b67;
+  background: #fff0f3;
+}
+
+.live-status.ended {
+  color: #7f91a8;
+  background: #f1f5f9;
+}
+
+.attendance-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1394,16 +1515,61 @@ a {
   height: 30px;
   padding: 0 12px;
   border-radius: 7px;
-  color: #fff;
-  background: #ff505d;
   font-size: 15px;
   line-height: 20px;
   font-weight: 900;
   white-space: nowrap;
 }
 
+.attendance-tag.attended {
+  color: #20b845;
+  background: #eaffef;
+  border: 1px solid rgba(32, 184, 69, 0.18);
+}
+
+.attendance-tag.leave {
+  color: #ff8b2a;
+  background: #fff3e4;
+  border: 1px solid rgba(255, 139, 42, 0.2);
+}
+
+.attendance-tag.absent {
+  color: #f04456;
+  background: #fff0f2;
+  border: 1px solid rgba(240, 68, 86, 0.18);
+}
+
+.live-enter-circle {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #f00012;
+  box-shadow: 0 10px 18px rgba(240, 0, 18, 0.18);
+}
+
+.live-enter-circle .lucide {
+  width: 23px;
+  height: 23px;
+  stroke-width: 3;
+}
+
+.live-title-row {
+  margin: 13px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
 .live-course-card h3 {
-  margin: 12px 0 0;
+  margin: 0;
+  min-width: 0;
+  flex: 1 1 auto;
   color: #424754;
   font-size: 21px;
   line-height: 28px;
@@ -1413,11 +1579,14 @@ a {
 
 .live-action {
   min-width: 72px;
-  margin-top: 2px;
+  margin-top: 0;
+  color: #fff;
+  background: #2f8dff;
+  box-shadow: 0 7px 14px rgba(47, 141, 255, 0.18);
 }
 
 .live-time-row {
-  margin-top: 24px;
+  margin-top: 18px;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -1447,6 +1616,42 @@ a {
   font-size: 13px;
   line-height: 18px;
   font-weight: 800;
+}
+
+.live-card-actions {
+  margin-top: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+.live-action.enter-course {
+  min-width: 92px;
+  background: #e7a21f;
+  box-shadow: 0 7px 14px rgba(231, 162, 31, 0.2);
+}
+
+.live-action.material {
+  min-width: 88px;
+  color: #7f94ad;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(143, 164, 189, 0.42);
+  box-shadow: 0 5px 11px rgba(121, 146, 174, 0.1);
+}
+
+.live-action.replay {
+  min-width: 88px;
+  color: #fff;
+  background: #8fa4bd;
+  border: 0;
+  box-shadow: 0 7px 14px rgba(124, 148, 175, 0.2);
+}
+
+.live-course-card.is-ended {
+  background: #F8FAFC;
+  border-color: rgba(211, 224, 239, 0.88);
+  box-shadow: 0 8px 18px rgba(77, 112, 151, 0.08);
 }
 
 .live-toast {

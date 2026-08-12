@@ -33,6 +33,21 @@ final result: blocked
 - The "更多" control has been removed; `作文批改` and `作文批改DSE` render inside the same common-app grid/background block by default.
 - All local `img src` paths in the HTML files exist.
 - The new page uses local image assets and icons from `3x-透明版` where matching 3x assets are available.
+- `extension.html` course cards no longer use the old `拓展` badge; card badges now show `未開始` or `已結束`.
+- Upcoming extension cards conditionally show `進入教室`, while ended extension cards conditionally show `查看回放` only on cards with replay access.
+- Extension cards now split schedule text into a larger time row followed by a smaller date row, matching the requested time-before-date ordering.
+- Extension course state labels now match the live-class read-only treatment, with shallow pill backgrounds and leading status dots.
+- `live.html` now separates course state from actions: `未開始`, `上課中`, and `已結束` render as label-style status badges.
+- Live upcoming cards expose `預習` plus a red circular arrow entry; the ongoing card exposes `進入課程`; ended cards expose `查看課件` and, where available, `查看回放`.
+- Live red circular arrows now render in the same row as the course title instead of beside the attendance label.
+- Live attendance labels cover `已出勤`, `已請假`, and `缺席` using the reference-style green, orange, and red soft-label treatments.
+- The live shortcut area is compressed: shortcut icon containers are `48px`, vertical gaps are reduced, and numeric badges use a smaller `17px` base size.
+- Live class state labels now use shallow read-only pills with a leading dot: `未開始` blue, `上課中` coral red, and `已結束` gray-blue.
+- Live and extension `進入教室` actions now share the darker gold button color, reducing the previous bright-yellow glare.
+- Live and extension `查看課件` actions now use a gray-blue outline secondary-button treatment with a white surface, border, and lighter shadow.
+- Live and extension `查看回放` actions remain gray-blue filled primary buttons with a stronger clickable shadow.
+- Live ended-course cards and extension ended-course cards now remain fully opaque, with no gray overlay or ended-state text dimming; their card background is the extremely light gray-blue `#F8FAFC`.
+- Browser availability was rechecked for this revision; the Browser runtime returned no available browser instances, so screenshot comparison remains blocked.
 
 ### Known Asset Mapping Notes
 
@@ -43,7 +58,7 @@ final result: blocked
 ### Finding
 
 - [P2] Browser-rendered comparison is unavailable.
-  - Evidence: `agent.browsers.list()` returned an empty list, so no in-app browser instance was available.
+  - Evidence: `agent.browsers.getDefault()` returned `No browser is available`, and `agent.browsers.list()` returned an empty list.
   - Impact: final screenshot comparison against the reference image cannot receive a valid pass.
   - Fix: open `Study.html` in an available browser at `393x852`, compare against the supplied reference and sketch, then update this report.
 
